@@ -1,0 +1,32 @@
+server:
+  port: 8113
+spring:
+  profiles:
+    include:
+      - console-logging
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    static-path-pattern: /static/**
+  resources:
+    static-locations:
+    - classpath:/static/
+    add-mappings: true
+  jpa:
+    open-in-view: false
+cfenginedb:
+  data-source:
+    url: jdbc:mysql://10.251.0.116:3306/recom?serverTimezone=Asia/Seoul
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: "root"
+    password: "dmp.123"
+billingdb:
+  data-source:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.2.81:3306/dreamsearch?useUnicode=true&serverTimezone=UTC&autoReconnect=true&autoReconnection=true
+    username: "swkim"
+    password: "2020!@#"
+
+
+
